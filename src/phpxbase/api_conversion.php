@@ -138,7 +138,7 @@ function &xbase_getInstance($i=NULL) {
 }
 function xbase_addInstance(&$i) {
 	global $xbase_instances;
-	$result = sizeof($xbase_instances);
+	$result = ($xbase_instances === null) ? 0 : sizeof($xbase_instances);
 	$xbase_instances[$result]=&$i;
 	return $result;
 }
