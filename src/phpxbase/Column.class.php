@@ -49,7 +49,7 @@ class XBaseColumn {
         $bytePos
     ) {
         $this->rawname=$name;
-        $this->name=strpos($name,0x00)!==false?substr($name,0,strpos($name,0x00)):$name;
+        $this->name=strpos($name,chr(0x00))!==false?substr($name,0,strpos($name,chr(0x00))):$name;
         $this->type=$type;
         $this->memAddress=$memAddress;
         $this->length=$length;
